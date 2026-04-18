@@ -2,6 +2,18 @@
 
 🚀 A lightweight Node.js server that provides an OpenAI-compatible API for Google's LiteRT-LM (formerly TensorFlow Lite LLM Runtime), enabling you to run local language models with any OpenAI SDK client.
 
+## Leeonidas Tweaks
+I've added some small tweaks so It can work with n8n. You can use portainer to add stack from repository. 
+- Then you need to download your models to /opt/models
+- Create the stack
+- In n8n you need on model node that you connect to AI Agent Node change Use "Responses API" to **false**
+- In n8n on Trigger "Chat event Received" turn off "Allow File Uploads"
+- Lastly add custom network to container n8n and litert server: 
+  Then you can use http://adres_or_hostname:3000/v1/ as openAI model in n8n.
+  API key is **sk-local**, model is **litert-lm** Unfortunately you can't use the tools in new n8n (requires newest openAI API)
+
+
+
 ## ✨ Features
 
 - **OpenAI API Compatibility**: Drop-in replacement for OpenAI's chat completion API
