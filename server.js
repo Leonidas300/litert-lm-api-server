@@ -77,7 +77,7 @@ function runLiteRT(prompt, options = {}) {
   return new Promise((resolve, reject) => {
     const args = [
       'run',
-      '--model_path', CONFIG.model_path,
+      CONFIG.model_path,
       '--prompt', prompt
     ];
 
