@@ -76,9 +76,9 @@ function messagesToPrompt(messages) {
 function runLiteRT(prompt, options = {}) {
   return new Promise((resolve, reject) => {
     const args = [
-      '--backend', CONFIG.backend,
+      'run',
       '--model_path', CONFIG.model_path,
-      '--input_prompt', prompt
+      '--prompt', prompt
     ];
 
     // Note: LiteRT-LM doesn't have a direct max_tokens parameter for regular inference
