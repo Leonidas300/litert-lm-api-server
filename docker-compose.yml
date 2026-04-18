@@ -11,6 +11,7 @@ services:
       MODEL_PATH: /models/gemma-4-E2B-it.litertlm
       API_KEY: sk-local
       BACKEND: cpu
+      LITERT_BINARY: /usr/local/bin/litert-lm
     deploy:
       resources:
         limits:
